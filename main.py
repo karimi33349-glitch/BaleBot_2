@@ -15,7 +15,8 @@ logging.basicConfig(
 )
 
 # ========== توکن‌ها ==========
-TOKEN = "1940151788:nCyuD7DP-rKTVU_9xZSOqSudgzuQ5uGY8VM"
+import os
+TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 PROVIDER_TOKEN = "WALLET-TEST-1111111111111111"  # 👈 توکن درگاه پرداخت خود را اینجا وارد کنید
 ADMIN_ID = 1972739248  # 👈 آیدی ادمین
 
