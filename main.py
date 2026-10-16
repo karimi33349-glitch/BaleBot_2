@@ -397,7 +397,10 @@ def main():
             STEP8_DESC: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_description)],
             STEP9_NEW_ORDER: [CallbackQueryHandler(new_order_handler, pattern='^again$')],
         },
-        fallbacks=[CommandHandler("cancel", cancel)],
+        fallbacks=[
+            CommandHandler("cancel", cancel),
+            CommandHandler("start", start),
+        ],
         per_message=False,
     )
 
